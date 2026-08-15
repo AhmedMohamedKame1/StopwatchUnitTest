@@ -7,6 +7,8 @@ public class StopWatch {
    public void increment(int min){
         if(min >= 0){
             this.minutes += min;
+            this.hours += minutes/60;
+            this.minutes = minutes%60;
         }
    }
 
