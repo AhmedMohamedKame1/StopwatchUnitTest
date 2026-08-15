@@ -19,4 +19,13 @@ public class StopWatchTest {
         stopWatch.increment(-10);
         assertEquals(20, stopWatch.getMinutes());
     }
+
+    @Test
+    public void givenMinutesReache60_whenIncrement_thenHoursShouldIncrement(){
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.increment(30);
+        stopWatch.increment(30);
+        assertEquals(1, stopWatch.getHours());
+    }
+
 }
