@@ -16,8 +16,8 @@ public class StopWatch {
         }
    }
 
-   public void setDailyWorking(){
-        
+   public void setDailyWorking(int hours){
+        this.workingHours = hours;
    }
 
    public int getMinutes(){

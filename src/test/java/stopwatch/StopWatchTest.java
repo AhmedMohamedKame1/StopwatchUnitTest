@@ -38,7 +38,7 @@ public class StopWatchTest {
     @Test
     public void givenDailyWorkingHoursSetTo8_whenHoursReach8_thenDaysShouldIncrement(){
         StopWatch stopWatch = new StopWatch();
-        stopWatch.setDailyWorking();
+        stopWatch.setDailyWorking(8);
         stopWatch.increment(8 * 60);
         assertEquals(1, stopWatch.getDays());
 
