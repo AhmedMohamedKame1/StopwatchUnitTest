@@ -31,10 +31,17 @@ public class StopWatchTest {
     @Test
     public void givenHoursReaches24_whenIncrement_thenDaysShouldIncrement(){
         StopWatch stopWatch = new StopWatch();
-        for(int i = 0; i < 24; i++){
-            stopWatch.increment(60);
-        }
+        stopWatch.increment(24 * 60);
         assertEquals(1, stopWatch.getDays());
+    }
+
+    @Test
+    public void givenDailyWorkingHoursSetTo8_whenHoursReach8_thenDaysShouldIncrement(){
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.setDailyWorking();
+        stopWatch.increment(8 * 60);
+        assertEquals(1, stopWatch.getDays());
+
     }
 
 }
