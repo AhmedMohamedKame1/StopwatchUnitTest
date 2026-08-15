@@ -3,6 +3,7 @@ package stopwatch;
 public class StopWatch {
    int minutes;
    int hours;
+   int days;
 
    public void increment(int min){
         if(min >= 0){
@@ -17,6 +18,9 @@ public class StopWatch {
    }
    public int getHours(){
         return this.hours;
+   }
+   public int getDays(){
+        return this.days;
    }
 
 }

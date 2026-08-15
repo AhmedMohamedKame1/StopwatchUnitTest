@@ -28,4 +28,13 @@ public class StopWatchTest {
         assertEquals(1, stopWatch.getHours());
     }
 
+    @Test
+    public void givenHoursReaches24_whenIncrement_thenDaysShouldIncrement(){
+        StopWatch stopWatch = new StopWatch();
+        for(int i = 0; i < 24; i++){
+            stopWatch.increment(60);
+        }
+        assertEquals(1, stopWatch.getDays());
+    }
+
 }
