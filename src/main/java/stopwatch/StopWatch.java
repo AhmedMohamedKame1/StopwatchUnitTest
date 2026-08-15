@@ -10,6 +10,8 @@ public class StopWatch {
             this.minutes += min;
             this.hours += minutes/60;
             this.minutes = minutes%60;
+            this.days += hours/24;
+            this.hours = hours%24;
         }
    }
 
